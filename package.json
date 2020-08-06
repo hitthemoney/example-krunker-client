@@ -1,0 +1,14 @@
+{
+  "name": "exampleclient",
+  "version": "1.0.0",
+  "description": "An example electron app for Krunker.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "hitthemoney",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "electron": "^9.1.2"
+  }
+}

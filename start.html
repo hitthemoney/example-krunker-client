@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <style>
+        body {
+            pointer-events: none;
+            text-align: center;
+            z-index: 1;
+
+            /* background-image: url("https://krunker.io/img/logo_4.png");
+            background-size: contain;
+            background-repeat: no-repeat; */
+            background-color: #222222;
+
+            border: 6px solid rgba(0, 0, 0, 0.479);
+            border-radius: 6px;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: "krunkerfont";
+            src: url("fonts/main.ttf");
+        }
+
+        .bottomT {
+            position: absolute;
+            bottom: 7;
+            color: #fff;
+            outline: none;
+            font-family: "krunkerfont";
+            font-size: 14px;
+            user-select: none;
+            text-shadow:
+                -1px -1px 0 #202020,
+                1px -1px 0 #202020,
+                -1px 1px 0 #202020,
+                1px 1px 0 #202020,
+                -2px -2px 0 #202020,
+                2px -2px 0 #202020,
+                -2px 2px 0 #202020,
+                2px 2px 0 #202020;
+        }
+
+        #krunkerLogo {
+            width: 95%;
+            height: 95%;
+            background-image: url("https://krunker.io/img/logo_4.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -28%)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bottomT" style="right: 7;">v1.0.0</div>
+    <div class="bottomT" style="left: 7;">Example Client</div>
+    <div id="krunkerLogo"></div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <style>
+        html,
+        body {
+            padding: 0px;
+            overflow: hidden;
+            margin: 0px;
+            border-radius: 5px;
+        }
+
+        @font-face {
+            font-family: krunkerfont;
+            src: url("fonts/main.ttf");
+        }
+
+        * {
+            outline: none;
+            font-family: krunkerfont;
+            color: #353535;
+            user-select: none;
+        }
+
+        .lineSpacing {
+            padding-bottom: 9px;
+        }
+
+        #promptText {
+            word-wrap: break-word;
+        }
+
+        #promptMenu {
+            background-color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-radius: 5px;
+            box-shadow: 0px 7px 0px 0px #a6a6a6;
+            -webkit-box-shadow: 0px 7px 0px 0px #a6a6a6;
+            -moz-box-shadow: 0px 7px 0px 0px #a6a6a6;
+        }
+
+        input {
+            top: 100px;
+            background-color: #eee;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            padding: 4px;
+            width: 250px;
+        }
+
+        .actionBtn {
+            border-radius: 5px;
+            color: #fff !important;
+            margin-right: 5px;
+            margin-left: 5px;
+            background-color: #2196F3;
+            padding: 6px;
+            font-size: 12px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .actionBtn:active {
+            background-color: rgb(102, 102, 102);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="promptMenu">
+        <div class="lineSpacing">
+            <a id="promptText">Copy Paste Settings Text Here</a>
+        </div>
+
+        <div id="typeFrame" class="lineSpacing">
+            <input id="promptInput" placeholder="Enter Input"><br>
+        </div>
+
+        <div class="lineSpacing">
+            <div class="actionBtn" onclick="submit()">Submit</div>
+            <div class="actionBtn" onclick="cancel()">Cancel</div>
+        </div>
+    </div>
+    <script>
+        const {
+            ipcRenderer,
+        } = require('electron');
+        //ipcRenderer for communicating with main script
+
+        cancel = () => {
+            window.close();
+        }
+        submit = () => {
+            ipcRenderer.send("promptSubmit", promptInput.value);
+            window.close();
+        }
+    </script>
+</body>
+
+</html>

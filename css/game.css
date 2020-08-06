@@ -1,0 +1,29 @@
+#aContainer {
+    /*background-color: rgba(0, 0, 0, .5);*/
+    -webkit-animation: rainbowBG2 .5s linear infinite !important;
+    animation: rainbowBG2 .5s linear infinite !important;
+}
+
+@keyframes rainbowBG2 {
+
+    0%,
+    100% {
+        background-color: rgba(220, 20, 60, 0.5)
+    }
+
+    20% {
+        background-color: rgba(255, 166, 0, 0.5)
+    }
+
+    40% {
+        background-color: rgba(255, 255, 0, 0.5)
+    }
+
+    60% {
+        background-color: rgba(0, 255, 0, 0.5)
+    }
+
+    80% {
+        background-color: rgba(0, 0, 205, 0.5)
+    }
+}
