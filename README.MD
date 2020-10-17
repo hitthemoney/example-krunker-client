@@ -6,7 +6,7 @@
 2. Paste `npm i electron --save` in terminal while in the client folder
 3. Modify the code
 4. Run the code by pasting `npm start` in terminal also while in the client folder
-## Usefull Information
+## Useful Information
 * [Electron Docs](https://www.electronjs.org/docs)
 * [NodeJS](https://nodejs.org/en/)
 
